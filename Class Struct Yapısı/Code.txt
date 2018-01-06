@@ -1,0 +1,148 @@
+import UIKit
+
+// Class ve Struct (Sýnýf ve Yapýlar)
+
+//Nesne Tabanlý Programlamanýn Temeli - OOP
+
+//Farklar
+
+// 1- Miras alma olayý Class'a has özelliktir
+
+// 2- Struct için init zorunlu deðildir
+
+class Arac{
+
+    
+
+    var tekerlekSayisi:Int
+
+    var renk:String
+
+    
+
+    init(tekerlekSayisi:Int, renk:String) {
+
+        self.tekerlekSayisi = tekerlekSayisi
+
+        self.renk = renk
+
+    }
+
+    
+
+}
+
+let bmw = Arac(tekerlekSayisi: 4, renk: "Kýrmýzý")
+
+bmw.renk
+
+bmw.tekerlekSayisi
+
+struct Araba{
+
+    var model:Int
+
+    var yakitTipi:String
+
+}
+
+var araba = Araba(model: 0, yakitTipi: "Hibrid")
+
+araba.model
+
+araba.yakitTipi
+
+let araba2 = araba
+
+araba.yakitTipi = "Dizel"
+
+araba.yakitTipi
+
+araba2.yakitTipi
+
+// Struct içinde ve Class içinde Fonksiyon Kullanýlabilir
+
+struct Kare{
+
+    
+
+    var kenarUzunlugu:Int
+
+    
+
+    func cevrehesapla()->Int{
+
+        
+
+        return kenarUzunlugu*4
+
+    }
+
+
+    func alanHesapla()->Int{
+
+        return kenarUzunlugu*kenarUzunlugu
+
+    }
+
+}
+
+let kenariUcOlanKare = Kare(kenarUzunlugu: 3)
+
+kenariUcOlanKare.alanHesapla()
+
+kenariUcOlanKare.cevrehesapla()
+
+//let bmw = Arac()
+
+//bmw.renk = "Siyah"
+
+//bmw.tekerlekSayisi = 5
+
+//bmw.renk
+
+//bmw.tekerlekSayisi
+
+//class Araba:Arac // Araba sýnýfý Arac sýnýfýndan miras aldý - inherit Arac = super calass base class
+
+//{
+
+//    var model = 0
+
+//    var yakitTipi = "Benzinli"
+
+//}
+
+//let araba = Araba()
+
+//print("araba renk: \(araba.renk)")
+
+//let araba2 = araba
+
+//print("araba2 renk : \(araba2.renk)")
+
+//araba.model
+
+//araba.yakitTipi = "Tüplü"
+
+//araba.renk = "Beyaz"
+
+//print("araba yeni renk: \(araba.renk)")
+
+//print("araba2 son renk: \(araba2.renk)")
+
+//// Reference Type -> örnek alýnan nesneyi deðiþtirince deðere referans alýnan diðer deðerlerde deðiþir
+
+////Value Type -> String,Int,Dict,Enum,Struct,Double
+
+//var a = 5
+
+//var b = a
+
+//a = 6
+
+//print("a son deðeri: \(a)")
+
+//print("b son deðeri: \(b)")
+
+//// Miras olayý Struct yapýsýnda yoktur
